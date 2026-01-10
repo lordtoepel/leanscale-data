@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "project_member.schema.json",
+  "title": "Project Member",
+  "description": "Represents a user's membership in a project",
+  "type": "object",
+  "required": [
+    "id",
+    "organization_id",
+    "project_id",
+    "user_id",
+    "created_at"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the project membership"
+    },
+    "organization_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Reference to the organization"
+    },
+    "project_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Reference to the project"
+    },
+    "user_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Reference to the user"
+    },
+    "billable_rate": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "description": "Override billable rate for this user on this project (in cents)"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the membership was created"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the membership was last updated"
+    }
+  }
+}
