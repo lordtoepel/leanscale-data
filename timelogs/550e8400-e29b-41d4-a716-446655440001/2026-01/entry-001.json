@@ -1,0 +1,16 @@
+{
+  "id": "550e8400-e29b-41d4-a716-446655440600",
+  "organization_id": "550e8400-e29b-41d4-a716-446655440001",
+  "member_id": "550e8400-e29b-41d4-a716-446655440200",
+  "project_id": "550e8400-e29b-41d4-a716-446655440400",
+  "task_id": "550e8400-e29b-41d4-a716-446655440500",
+  "description": "Initial discovery call and requirements gathering",
+  "start": "2026-01-09T09:00:00-07:00",
+  "end": "2026-01-09T11:30:00-07:00",
+  "duration": 9000,
+  "is_billable": true,
+  "billable_rate": 150,
+  "tags": [],
+  "created_at": "2026-01-09T09:00:00Z",
+  "updated_at": "2026-01-09T11:30:00Z"
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "timelog.schema.json",
+  "title": "Time Entry",
+  "type": "object",
+  "required": ["id", "organization_id", "member_id", "start", "created_at"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "organization_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "member_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "project_id": {
+      "type": ["string", "null"],
+      "format": "uuid"
+    },
+    "task_id": {
+      "type": ["string", "null"],
+      "format": "uuid"
+    },
+    "description": {
+      "type": ["string", "null"],
+      "maxLength": 2000
+    },
+    "start": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "end": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "duration": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "description": "Duration in seconds (calculated from start/end)"
+    },
+    "is_billable": {
+      "type": "boolean",
+      "default": true
+    },
+    "billable_rate": {
+      "type": ["number", "null"],
+      "minimum": 0
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "default": []
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "organization.schema.json",
+  "title": "Organization",
+  "type": "object",
+  "required": ["id", "name", "owner_id", "created_at"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "owner_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "currency": {
+      "type": "string",
+      "default": "USD",
+      "enum": ["USD", "EUR", "GBP", "CAD", "AUD"]
+    },
+    "billable_rate": {
+      "type": ["number", "null"],
+      "minimum": 0
+    },
+    "personal_team": {
+      "type": "boolean",
+      "default": false
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
